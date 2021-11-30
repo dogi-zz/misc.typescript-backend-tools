@@ -1,0 +1,140 @@
+{
+  "defaultSeverity": "warning",               // "error" | "warning" | "off": The severity level that is applied to rules in the config file.
+  "extends": [
+    "tslint:recommended"                      // a stable, somewhat opinionated set of rules which we encourage for general TypeScript programming.
+  ],
+  "rules": {
+    "adjacent-overload-signatures": true,     // Enforces function overloads to be consecutive.
+    "align": {
+      "options": [
+        "parameters",
+        "statements"
+      ]
+    },
+    "array-type": [                           // Requires using either ‘T[]’ or ‘Array' for arrays. (enabled)
+      false
+    ],
+    "arrow-parens": false,                    // Requires parentheses around the parameters of arrow function definitions. (enabled)
+    "arrow-return-shorthand": true,           // Suggests to convert () => { return x; } to () => x.
+    "await-promise": true,                    // Warns for an awaited value that is not a Promise.
+    "ban-comma-operator": true,               // Disallows the comma operator to be used.
+    "class-name": true,                       // Enforces PascalCased class and interface names.
+    "comment-format": false,
+    "curly": true,                            // Enforces braces for if/for/do/while statements.
+    "deprecation": {
+      "severity": "warning"
+    },
+    "forin": true,                            // Requires a for ... in statement to be filtered with an if statement.
+    "indent": {
+      "options": [
+        "spaces"
+      ]
+    },
+    "interface-name": [                       // Requires interface names to begin with a capital ‘I’ (enabled)
+      false
+    ],
+    "max-classes-per-file": false,            // A file may not contain more than the specified number of classes
+    "max-line-length": [                      // Requires lines to be under a certain max length.
+      true,
+      240
+    ],
+    "member-access": [
+      true                                    // Requires explicit visibility declarations for class members.
+    ],
+    "no-any": true,                           // Disallows usages of any as a type declaration.
+    "no-conditional-assignment": true,        // Disallows any type of assignment in conditionals.
+    "no-console": true,                       // Bans the use of specified console methods.
+    "no-construct": true,                     // Disallows access to the constructors of String, Number, and Boolean.
+    "no-default-export": true,                // Disallows default exports in ES6-style modules.
+    "no-dynamic-delete": true,                // Bans usage of the delete operator with computed key expressions.
+    "no-empty": false,                        // Disallows empty blocks.
+    "no-empty-interface": true,               // Forbids empty interfaces.
+    "no-eval": true,                          // Disallows eval function invocations.
+    "no-floating-promises": false,             // Promises returned by functions must be handled appropriately.
+    "no-implicit-dependencies": true,         // Disallows importing modules that are not listed as dependency in the project’s package.json
+    "no-import-side-effect": [                // Avoid import statements with side-effect.
+      true,
+      {
+        "ignore-module": "^rxjs"              // ignored modules for no-import-side-effect
+      }
+    ],
+    "no-internal-module": true,               // Disallows internal module
+    "no-invalid-this": true,                  // Disallows using the this keyword outside of classes.
+    "no-magic-numbers": false,                // magic number has to be allowed because of jest and class-validator (enabled)
+    "no-non-null-assertion": false,           // Disallows non-null assertions using the ! postfix operator.
+    "no-parameter-reassignment": true,        // Disallows reassigning parameters.
+    "no-unused-expression": true,             // Disallows unused expression statements.
+    "no-return-await": true,                  // Disallows unnecessary return await.
+    "no-var-keyword": true,                   // Disallows usage of the var keyword.
+    "no-var-requires": true,                  // Disallows the use of require statements except in import statements.
+    "no-shadowed-variable": true,             // Disallows shadowing variable declarations.
+    "no-string-throw": true,                  // Flags throwing plain strings or concatenations of strings.
+    "no-switch-case-fall-through": true,
+    "no-unsafe-finally": true,                // Disallows control flow statements, such as return, continue, break and throws in finally blocks.
+    "object-literal-sort-keys": false,        // Checks ordering of keys in object literals. (enabled)
+    "one-variable-per-declaration": [         // Disallows multiple variable definitions in the same declaration statement
+      true
+    ],
+    "only-arrow-functions": true,             // Allows traditional (non-arrow) function expressions. (enabled)
+    "ordered-imports": [                      // Requires that import statements be alphabetized and grouped.
+      true
+    ],
+    "prefer-const": true,                     // Requires that variable declarations use const instead of let and var if possible.
+    "prefer-for-of": false,                   // Recommends a ‘for-of’ loop over a standard ‘for’ loop if the index is only used to access the array being iterated
+    "prefer-template": [                      // Prefer a template expression over string literal concatenation.
+      true,
+      "allow-single-concat"                   // allows up to one concatenation
+    ],
+    "promise-function-async": false,           // Requires any function or method that returns a promise to be marked async.
+    "quotemark": [                            // Enforces quote character for string literals.
+      true,
+      "single"                                // "single" enforces single quotes
+    ],
+    "restrict-plus-operands": true,           // When adding two variables, operands must both be of type number or of type string.
+    "trailing-comma": [true, {"multiline":  "always", "singleline":  "never"}],
+    "triple-equals": true,                    // Requires === and !== in place of == and !=.
+    "semicolon": [                            // Enforces consistent semicolon usage at the end of every statement.
+      true,
+      "always"                                // Enforces semicolons at the end of every statement.
+    ],
+    "variable-name": {                        // Checks variable names for various errors.
+      "options": [
+        "allow-leading-underscore",           // allows underscores at the beginning
+        "ban-keywords"
+      ]
+    },
+
+
+
+    "component-class-suffix": true,
+    "contextual-lifecycle": true,
+    "directive-class-suffix": true,
+    "directive-selector": [
+      true,
+      "attribute",
+      "app",
+      "camelCase"
+    ],
+    "component-selector": [
+      true,
+      "element",
+      "app",
+      "kebab-case"
+    ],
+    "no-conflicting-lifecycle": true,
+    "no-input-rename": true,
+    "no-output-on-prefix": false,
+    "use-lifecycle-interface": true,
+
+    "import-blacklist": [
+      true,
+      "rxjs/Rx"
+    ]
+  },
+  "rulesDirectory": [
+  ],
+  "prefer-for-of": false,
+  "no-output-on-prefix": false,
+
+  "no-unnecessary-initializer": false
+}
