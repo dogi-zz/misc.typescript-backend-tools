@@ -2,7 +2,7 @@
   "name": "typescript-backend-tools",
   "version": "0.0.0",
   "scripts": {
-    "test:dev": "npx jest --watch"
+    "test:dev": "npx jest --watch --no-cache"
   },
   "dependencies": {
     "sift": "^14.0.2",
